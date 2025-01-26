@@ -1,5 +1,8 @@
 # Compass Education API for Rust
 
+> [!CAUTION]
+> This library is prone to breaking if Compass Education changes their API. Use at your own risk.
+
 A rust library for interacting with the Compass Education API.
 
 Uses Reqwest and Tokio under the hood.
@@ -25,6 +28,18 @@ or add this to your `Cargo.toml`:
 ```toml
 [dependencies]
 compass_edu_api = { git = "https://github.com/on9au/compass-edu-api" }
+```
+
+## Simple Example
+
+```rust
+#[tokio::main]
+async fn main() {
+    let client = compass_edu_api::client::Client::new("<School Prefix>", "<Auth Cookie>");
+    client.login().await.unwrap();
+    let locations: Vec<compass_edu_api::models::Location> = client.get_locations(None, None, None).await.unwrap();
+    println!("{:?}", locations);
+}
 ```
 
 ## Documentation
