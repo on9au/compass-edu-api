@@ -24,7 +24,7 @@ or add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-compass-edu-api = { git = "https://github.com/on9au/compass-edu-api" }
+compass_edu_api = { git = "https://github.com/on9au/compass-edu-api" }
 ```
 
 ## Documentation
