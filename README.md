@@ -35,9 +35,13 @@ compass_edu_api = { git = "https://github.com/on9au/compass-edu-api" }
 ```rust
 #[tokio::main]
 async fn main() {
+    // Create a new client with your school prefix and auth cookie
     let client = compass_edu_api::client::Client::new("<School Prefix>", "<Auth Cookie>");
+    // Login to the API
     client.login().await.unwrap();
+    // Get a list of locations from the API
     let locations: Vec<compass_edu_api::models::Location> = client.get_locations(None, None, None).await.unwrap();
+    // Print the locations to the console
     println!("{:?}", locations);
 }
 ```
