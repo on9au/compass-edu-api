@@ -1,4 +1,13 @@
 //! # API Methods
+//! 
+//! Expecting API methods here? Try the Client struct in the `client` module.
+//! 
+//! The API methods are implemented as methods on the `Client` struct.
+//! 
+//! [Jump to `Client`](../client/struct.Client.html)
+
+// For Devs: This is the API module. It contains the API methods for the Compass Education API.
+// API methods are implemented as methods for crate::client::Client.
 
 use serde::Deserialize;
 
@@ -47,7 +56,11 @@ impl crate::client::Client {
             None => Err(ApiError::UnexpectedResponse),
         }
     }
-
+    
+    /// # **BROKEN. WILL NOT WORK.**
+    /// 
+    /// This method only stays here for reference.
+    /// 
     /// Logs into the Compass Education API.
     ///
     /// Returns `()`, if the login request was successful.
