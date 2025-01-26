@@ -1,9 +1,9 @@
 //! # API Methods
-//! 
+//!
 //! Expecting API methods here? Try the Client struct in the `client` module.
-//! 
+//!
 //! The API methods are implemented as methods on the `Client` struct.
-//! 
+//!
 //! [Jump to `Client`](../client/struct.Client.html)
 
 // For Devs: This is the API module. It contains the API methods for the Compass Education API.
@@ -18,7 +18,7 @@ use crate::{
 
 impl crate::client::Client {
     /// Get all buildings on Campus.
-    /// 
+    ///
     /// Params:
     /// - `page`: The page number to get. Default is 1.
     /// - `start`: The start index. Default is 0.
@@ -56,11 +56,11 @@ impl crate::client::Client {
             None => Err(ApiError::UnexpectedResponse),
         }
     }
-    
+
     /// # **BROKEN. WILL NOT WORK.**
-    /// 
+    ///
     /// This method only stays here for reference.
-    /// 
+    ///
     /// Logs into the Compass Education API.
     ///
     /// Returns `()`, if the login request was successful.

@@ -1,18 +1,21 @@
 //! # Compass Education API Client Module
-//! 
+//!
 //! This module contains the Compass Education API client, and its reference. [`Client`].
 
-use std::sync::Arc;
+// for docs
+#[allow(unused_imports)]
+use std::rc::Rc;
 
+use std::sync::Arc;
 use tokio::sync::RwLock;
 use url::Url;
 
 const BASE_URL: &str = "compass.education";
 
 /// # The Compass Education API client.
-/// 
+///
 /// The client is used to interact with the Compass Education API.
-/// 
+///
 /// Its methods interact with the API and return the data in a structured format.
 ///
 /// This struct contains the base URL of the school and a reqwest client.

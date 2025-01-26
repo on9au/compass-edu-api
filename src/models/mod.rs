@@ -1,14 +1,14 @@
 //! # API Models
-//! 
+//!
 //! Contains the API models (structs) for the Compass Education API.
 
 use serde::Deserialize;
 use serde_json::Value;
 
 /// The response from most API requests.
-/// 
+///
 /// Most likely obfuscated to prevent reverse engineering (makes our lives harder ;-;).
-/// 
+///
 /// - `h`: Seems to be returned on error.
 /// - `d`: The data returned from the API.
 #[derive(Debug, Deserialize)]
