@@ -12,9 +12,13 @@ This library may break if Compass Education changes their API.
 
 ## Usage
 
+Type this in your terminal:
+
 ```sh
 cargo add https://github.com/on9au/compass-edu-api
 ```
+
+or add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
