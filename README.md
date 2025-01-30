@@ -15,6 +15,10 @@ The methods and models are based on investigation of Compass Education's website
 
 This library may break if Compass Education changes their API.
 
+## Rust MSRV
+
+Latest.
+
 ## Usage
 
 Type this in your terminal:
