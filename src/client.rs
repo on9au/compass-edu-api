@@ -8,6 +8,7 @@ use std::rc::Rc;
 
 use std::sync::Arc;
 use tokio::sync::RwLock;
+use tracing::trace;
 use url::Url;
 
 const BASE_URL: &str = "compass.education";
@@ -72,6 +73,8 @@ impl Client {
         let cookie = format!("ASP.NET_SessionId={}", cookie.into());
         let cookie = cookie.as_str();
         jar.add_cookie_str(cookie, &base_url.parse::<Url>().unwrap());
+
+        trace!("Cookie Jar: {:#?}", jar);
 
         Self {
             inner: Arc::new(RwLock::new(CompassEduClientRef {

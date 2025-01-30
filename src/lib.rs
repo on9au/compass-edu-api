@@ -27,6 +27,11 @@ mod tests {
 
     #[tokio::test]
     async fn test() {
+        // enable tokio tracing to trace all the things
+        tracing_subscriber::fmt::fmt()
+            .with_max_level(tracing::Level::TRACE)
+            .init();
+
         dotenv().ok();
         let test_school_prefix = env::var("TEST_SCHOOL_PREFIX")
             .expect("TEST_SCHOOL_PREFIX must be set. Do you have a .env file or env vars set?");
