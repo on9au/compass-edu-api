@@ -1,3 +1,11 @@
+//! # Accounts.svc
+//!
+//! Contains methods for the /Accounts.svc API endpoint.
+
+use serde::Deserialize;
+
+use crate::{errors::ApiError, models::Response};
+
 impl crate::client::Client {
     /// # **BROKEN. WILL NOT WORK.**
     ///
