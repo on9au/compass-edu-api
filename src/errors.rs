@@ -8,6 +8,9 @@
 
 use thiserror::Error;
 
+/// API Error
+///
+/// Represents errors that can occur when using the Compass Education API.
 #[derive(Error, Debug)]
 pub enum ApiError {
     /// Reqwest Failure

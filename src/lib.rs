@@ -3,6 +3,7 @@
 #![doc = include_str!("../README.md")]
 #![forbid(unsafe_code)]
 #![deny(unreachable_pub)]
+#![warn(missing_docs)]
 
 //!
 //! ## Navigating the documentation
