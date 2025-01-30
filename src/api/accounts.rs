@@ -11,7 +11,11 @@ impl crate::client::Client {
     ///
     /// This method only stays here for reference.
     ///
+    /// ---
+    ///
     /// Logs into the Compass Education API.
+    ///
+    /// `/Accounts.svc/GetAccount`
     ///
     /// Returns `()`, if the login request was successful.
     ///
